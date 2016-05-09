@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use("/api/v1", require("./controllers/apiController"));
 
 // start serving
-app.listen(8989, function () {
+app.listen(process.env.PORT || 8080, function () {
     console.log("Started listening on port", 8989);
 });
 
