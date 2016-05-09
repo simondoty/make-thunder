@@ -20,4 +20,4 @@ app.listen(8989, function () {
 
 // Connect to mongodb database
 // TODO: configure this and change DB to events
-mongoose.connect("mongodb://localhost/shows");
+//mongoose.connect("mongodb://localhost/shows");
