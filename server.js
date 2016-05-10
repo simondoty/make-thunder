@@ -20,4 +20,4 @@ app.listen(process.env.PORT || 8080, function () {
 
 // Connect to mongodb database
 // TODO: configure this and change DB to events
-//mongoose.connect("mongodb://localhost/shows");
+mongoose.connect(process.env.MONGODB_URI);
