@@ -22,7 +22,7 @@ app.listen(process.env.PORT || 9090, function () {
 // TODO: configure this and change DB to events
 console.log(process.env.MONGOLAB_URI);
 var mongoURI =
-    process.env.MONGOLAB_URI ||
+    "mongodb://heroku_w2chrbqj:nob0c355h5mjkp7ogd8h5hum8k@ds055565.mlab.com:55565/heroku_w2chrbqj" ||
     'mongodb://localhost/shows';
 
 mongoose.connect(mongoURI, function(err, success) {
