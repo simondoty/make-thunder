@@ -19,10 +19,9 @@ app.listen(process.env.PORT || 9090, function () {
 });
 
 // Connect to mongodb database
-// TODO: configure this and change DB to events
-console.log(process.env.MONGOLAB_URI);
+// TODO: configure local vs prod envs
 var mongoURI =
-    "mongodb://heroku_w2chrbqj:nob0c355h5mjkp7ogd8h5hum8k@ds055565.mlab.com:55565/heroku_w2chrbqj" ||
+    process.env.MONGODB_URI ||
     'mongodb://localhost/shows';
 
 mongoose.connect(mongoURI, function(err, success) {
