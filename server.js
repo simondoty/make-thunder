@@ -14,15 +14,15 @@ app.use(bodyParser.json());
 app.use("/api/v1", require("./controllers/apiController"));
 
 // start serving
-app.listen(process.env.PORT || 8080, function () {
-    console.log("Started listening on port", 8989);
+app.listen(process.env.PORT || 9090, function () {
+    console.log("Started listening on port", 9090);
 });
 
 // Connect to mongodb database
 // TODO: configure this and change DB to events
+console.log(process.env.MONGOLAB_URI);
 var mongoURI =
     process.env.MONGOLAB_URI ||
-    process.env.MONGOHQ_URL ||
     'mongodb://localhost/shows';
 
 mongoose.connect(mongoURI, function(err, success) {
