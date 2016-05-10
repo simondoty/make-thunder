@@ -6,9 +6,8 @@ var router = require("express").Router();
 router.route("/shows/:id?").get(getEvents);
 
 function getEvents(req, res) {
-    // res.json({});
-    var params = req.params.id ? {id: req.params.id} : {};
-    Event.find({}, function (err, events) {
+    // var params = req.params.id ? {id: req.params.id} : {};
+    Event.find(function (err, events) {
         if (err) {
             res.send(err);
         }
